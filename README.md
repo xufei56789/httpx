@@ -1,1 +1,38 @@
-# httpx
+这是一个轻量级的http访问库，简化 HTTP方面配置和简化对cookie和head的操作
+==
+
+##获取对象
+```go
+httpx.NewHttpx()
+```
+
+##设置http代理
+```go
+[object].SetProxy("http://127.0.0.1:9090")
+```
+
+##设置302重定向次数
+```go
+//go官方库中当http请求到302代码 就会默认执行跳转操作
+//而且不会记录cookie header等信息
+//0是不执行302重定向 >0 执行多少次
+[object].SetRedirect(0)
+```
+
+##是否跳过证书检查
+```go
+//当遇见证书不受信任导致无法访问开启本项
+//0是不执行302重定向 >0 执行多少次
+[object].SetInsecureSkipVerify(true)
+```
+
+##设置x509标准证书
+```go
+if caCrt, err := ioutil.ReadFile("./xxxx.crt"); err == nil {
+    //设置证书
+	[object].SetCertPoolx509(caCrt)
+}
+```
+
+
+
