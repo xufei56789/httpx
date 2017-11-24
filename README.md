@@ -7,8 +7,8 @@ var hx Httpx
 hx = httpx.NewHttpx()
 ```
 
---配置--
-==
+##--配置--
+
 ##设置http代理
 ```go
 [object].SetProxy("http://127.0.0.1:9090")
