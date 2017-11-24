@@ -48,8 +48,12 @@ func (httpx *Httpx) SetInsecureSkipVerify(b bool)  {
 }
 
 //设置x509cert证书
-func (httpx *Httpx) SetCertPoolx509(b []byte)  {
+func (httpx *Httpx) SetCertPoolx509(b []byte) bool {
 	pool := x509.NewCertPool()
-	pool.AppendCertsFromPEM(b)
+	ok := pool.AppendCertsFromPEM(b)
+	if !ok {
+		return ok
+	}
 	httpx.configTls.RootCAs = pool
+	return ok
 }

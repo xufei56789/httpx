@@ -22,5 +22,5 @@ func (httpx *Httpx) Post(url string, body []byte) (*Response, error) {
 	if err != nil {
 		return response, err
 	}
-	return response, error(nil)
+	return response, nil
 }

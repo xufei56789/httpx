@@ -19,5 +19,5 @@ func (httpx *Httpx) Get(url string) (*Response , error) {
 	if err != nil{
 		return response,err
 	}
-	return response,error(nil)
+	return response,nil
 }

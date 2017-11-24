@@ -26,5 +26,5 @@ func (httpx *Httpx) Request(method string, url string, b []byte) (*Response, err
 	if err != nil {
 		return response, err
 	}
-	return response, error(nil)
+	return response, nil
 }
