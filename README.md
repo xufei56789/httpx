@@ -1,9 +1,10 @@
 这是一个轻量级的http库，简化 HTTP方面配置和简化对cookie和head的操作
-====
+==
 
 ##获取对象
 ```go
-httpx.NewHttpx()
+var hx Httpx
+hx = httpx.NewHttpx()
 ```
 
 --配置--
