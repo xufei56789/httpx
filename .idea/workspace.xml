@@ -2,16 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3f7957f-4d26-4c82-8936-58543eb1b170" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/yiliu.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/httpx/config.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/httpx/cookie.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/httpx/get.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/httpx/header.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/httpx/httpx.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/httpx/post.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/httpx/request.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/httpx/response.go" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -132,8 +122,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="912">
-              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="192">
+              <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -284,11 +274,6 @@
           <expand>
             <path>
               <item name="httpx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="httpx" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="httpx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="httpx" type="462c0819:PsiDirectoryNode" />
               <item name="httpx" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -470,8 +455,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="192">
+          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
           <folding />
         </state>
       </provider>
