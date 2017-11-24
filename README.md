@@ -8,6 +8,7 @@ hx = httpx.NewHttpx()
 ```
 
 --配置--
+==
 ##设置http代理
 ```go
 [object].SetProxy("http://127.0.0.1:9090")
@@ -32,7 +33,7 @@ hx = httpx.NewHttpx()
 ```go
 if caCrt, err := ioutil.ReadFile("./xxxx.crt"); err == nil {
     //设置证书
-	[object].SetCertPoolx509(caCrt)
+    [object].SetCertPoolx509(caCrt)
 }
 ```
 
