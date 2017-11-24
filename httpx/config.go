@@ -6,7 +6,28 @@ import (
 	"errors"
 	"strconv"
 	"crypto/x509"
+	"crypto/tls"
 )
+
+//获取Tr配置指针
+func (httpx *Httpx) getconfigTr() *http.Transport {
+	if httpx.configTr == nil {
+		tr := &http.Transport{}
+		httpx.configTr = tr
+		httpx.client.Transport = tr
+	}
+	return httpx.configTr
+}
+
+//获取Tls配置指针
+func (httpx *Httpx) getConfigTls() *tls.Config {
+	if httpx.configTls == nil {
+		tls := &tls.Config{}
+		httpx.getconfigTr().TLSClientConfig = tls
+		httpx.configTls = tls
+	}
+	return httpx.configTls
+}
 
 //设置代理(proxyUrl [代理地址http://xxxxx:prot])
 func (httpx *Httpx) SetProxy(proxyUrl string) error {
@@ -15,7 +36,7 @@ func (httpx *Httpx) SetProxy(proxyUrl string) error {
 	if err != nil {
 		return err
 	}
-	httpx.configTr.Proxy = http.ProxyURL(urlproxy)
+	httpx.getconfigTr().Proxy = http.ProxyURL(urlproxy)
 	return nil
 }
 
@@ -44,7 +65,7 @@ func (httpx *Httpx) SetRedirect(i int) {
 
 //是否跳过证书检查
 func (httpx *Httpx) SetInsecureSkipVerify(b bool)  {
-	httpx.configTls.InsecureSkipVerify = true
+	httpx.getConfigTls().InsecureSkipVerify = true
 }
 
 //设置x509cert证书
@@ -54,6 +75,6 @@ func (httpx *Httpx) SetCertPoolx509(b []byte) bool {
 	if !ok {
 		return ok
 	}
-	httpx.configTls.RootCAs = pool
+	httpx.getConfigTls().RootCAs = pool
 	return ok
 }

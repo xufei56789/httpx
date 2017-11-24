@@ -45,11 +45,6 @@ const (
 func NewHttpx() *Httpx {
 	var httpx Httpx
 	//声明配置
-	tr := &http.Transport{}
-	tr.TLSClientConfig = &tls.Config{}
 	httpx.client = &http.Client{}
-	httpx.configTr = tr
-	httpx.configTls = tr.TLSClientConfig
-	httpx.client.Transport = tr
 	return &httpx
 }
