@@ -44,7 +44,7 @@ const (
 //创建httpx指针对象
 func NewHttpx() *Httpx {
 	var httpx Httpx
-	//声明配置
+	//声明配置 
 	httpx.client = &http.Client{}
 	return &httpx
 }
